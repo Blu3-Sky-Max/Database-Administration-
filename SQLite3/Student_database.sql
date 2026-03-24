@@ -30,4 +30,5 @@ update Student set country='Turkey'where id =5;
 update Student set height=183 where id =1; 
 
 update Student set school='bosun university' where id =3; 
+INSERT INTO Student (name,location,major) values ('john','Egypt','Computer science'); 
 SELECT * FROM Student;
