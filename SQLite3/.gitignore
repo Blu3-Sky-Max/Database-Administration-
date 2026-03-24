@@ -1,0 +1,3 @@
+# .gitignore content
+# Ignore SQLite database file so Git history stays fast
+*.db
