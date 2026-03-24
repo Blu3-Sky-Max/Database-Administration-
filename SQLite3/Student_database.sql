@@ -1,3 +1,6 @@
+DROP TABLE IF EXISTS Student; 
+.headers on 
+.mode columns 
 CREATE TABLE Student (
     id                INTEGER PRIMARY KEY,
     name              TEXT,
