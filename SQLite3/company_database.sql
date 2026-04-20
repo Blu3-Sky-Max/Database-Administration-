@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS Instructor;
 
 .headers on
-.mode columns 
+.mode column 
 
 CREATE TABLE Instructor (
                              ID                char(5),

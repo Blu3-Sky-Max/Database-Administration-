@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS Student; 
 .headers on 
-.mode columns 
+.mode column 
 CREATE TABLE Student (
     id                INTEGER PRIMARY KEY,
     name              TEXT,
@@ -23,8 +23,12 @@ INSERT INTO Student (name, height, location, school, date_of_birth, major, gpa, 
 ('faruk', 140, 'cairo', 'United state university', '1992-11-22', 'History', 3.2, 'faruk@example.com'),
 ('bokky', 120, 'Nigeria','Bose university','2000-01-12','political science',3.7,'bokky@gmail.com'),
 ('martin', 193, 'Istanbul','Altinbas','2005-07-08','computer engineering',null,'martin@gmail.com'),
-('eyza',23,'istanbul ', 'Altinbas university' ,'1996-02-21', 'computer engineering',4.5,'beyzanur@gmail.com');
+('beyza',23,'istanbul ', 'Altinbas university' ,'1996-02-21', 'computer engineering',4.5,'beyzanur@gmail.com')
+,('Yusuf',35,'istanbul ', 'Altinbas university' ,'1990-02-21', 'Computer engineering',4.5,'yusuf@gmail.com');
+
+
 update Student set country='United state' where id =1;
+
 update Student set country='Morocco' where id =2;
 update Student set name='Beyza' where id =5; 
 update Student set country='Turkey'where id =5;

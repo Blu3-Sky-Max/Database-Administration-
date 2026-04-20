@@ -10,10 +10,10 @@ Practical SQLite3 exercises covering table creation, data insertion, schema modi
 
 ```bash
 # Fedora/RHEL
-sudo dnf install sqlite
+$ sudo dnf install sqlite
 
 # Debian/Ubuntu
-sudo apt install sqlite3
+$ sudo apt install sqlite3
 ```
 
 ---
