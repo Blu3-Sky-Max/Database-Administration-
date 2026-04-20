@@ -88,7 +88,7 @@ Then inside the SQLite shell:
 
 ```sql
 .headers on
-.mode columns
+.mode column
 SELECT * FROM Student;
 SELECT name, major, gpa FROM Student WHERE gpa > 3.5;
 .quit
