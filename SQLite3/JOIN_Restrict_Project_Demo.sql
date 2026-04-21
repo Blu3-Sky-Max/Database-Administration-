@@ -2,8 +2,6 @@
    Date: 2026/04/20
  */
 
-
----using the embedded header and column
 .headers on
 .mode column 
 
