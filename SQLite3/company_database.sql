@@ -8,16 +8,13 @@ CREATE TABLE Instructor (
                              name           varchar(20),
                              dept_name  varchar(20),
                              salary           numeric(8,2));
-insert into instructor (id,name,dept_name,salary) values
+INSERT INTO Instructor (id,name,dept_name,salary) values
 ('2371M','John',  'Cybersecurity',345.32),
 ('321M','Mark',  'Full stack',32.32),
 ('A2133','james',  'Software develop',5050.32);
 
-alter table Instructor add column Height INTEGER(3); 
+ALTER TABLE Instructor ADD COLUMN Height INTEGER(3); 
 
-update instructor set height=188 where id='A2133'; 
- 
+UPDATE Instructor SET height=188 WHERE id='A2133'; 
 
-		update instructor set height=167 where name='Mark';
-
-		Select name,ID,dept_name from instructor where height=188; 
+SELECT name,ID,dept_name FROM Instructor WHERE height=188; 
