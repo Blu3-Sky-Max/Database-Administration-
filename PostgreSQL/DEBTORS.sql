@@ -1,0 +1,65 @@
+/* Usman Opeyemi Olanreway (Blu3-Sky) 
+   Date: 2026-04-30
+*/
+
+
+DROP SCHEMA public CASCADE;
+CREATE SCHEMA public;
+
+CREATE DOMAIN SELLER_TYPE AS CHAR(20);
+CREATE DOMAIN DEBTOR_TYPE AS CHAR(20);
+
+CREATE TABLE "SELLER" (
+        "SEL_NAME"     CHAR (20) PRIMARY KEY,
+        "DATE" TEXT,
+        "AGE" INTEGER ,
+       "SHOP" TEXT
+);
+
+CREATE TABLE "DEBTORS" ( 
+	"DEB_NAME" CHAR (20) PRIMARY KEY,
+	"AMOUNT" NUMERIC (6,2), 
+	"PRODUCT_PURCHASED" TEXT,
+	"SEL_NAME"         CHAR(20),
+	FOREIGN KEY ("SEL_NAME") REFERENCES "SELLER"("SEL_NAME")
+); 
+INSERT INTO "SELLER" VALUES
+                ('IBRAHIM','2026-05-01','42','NEW CAIRO'),
+                 ('DAVID','2021-01-01','34','CAIRO');
+
+
+INSERT INTO "DEBTORS" VALUES
+                  ('USMAN', 3245.2, 'TEA CUP','DAVID'),
+                  ('JHON', 145.2, 'NIKE SHOE','IBRAHIM'),
+                  ('JAMES', 45.2, 'PUMPKIN','DAVID'),
+		   ('UFUK', 1245.2, 'BIKE','DAVID'),
+		 ('FARUK', 3245.3, 'JET','DAVID');
+
+
+
+                            
+SELECT 
+* FROM "SELLER" S
+JOIN
+"DEBTORS" D 
+ON 
+S."SEL_NAME" = D."SEL_NAME";
+
+
+CREATE VIEW "HIGHER_DEBTORS" AS 
+SELECT 
+D."DEB_NAME",
+D."AMOUNT",
+S."SHOP" 
+FROM
+"SELLER" S
+JOIN
+ "DEBTORS" D
+ON
+S."SEL_NAME" = D."SEL_NAME"
+WHERE
+D."AMOUNT" > 500 ;
+
+SELECT 
+* FROM 
+"HIGHER_DEBTORS"; 
