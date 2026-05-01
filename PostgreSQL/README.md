@@ -1,7 +1,10 @@
 # PostgreSQL Labs
 
 **Author:** Usman O. Olanrewaju (Blu3-Sky)
+
 **Environment:** Fedora / Rocky Linux 9 — PostgreSQL 13/18
+
+
 **Focus:** Client-server relational database administration using PostgreSQL
 
 ---
@@ -9,10 +12,10 @@
 ## Installation
 
 ```bash
-sudo dnf install postgresql postgresql-server
-sudo postgresql-setup --initdb
-sudo systemctl enable --now postgresql
-sudo systemctl status postgresql
+$ sudo dnf install postgresql postgresql-server
+$ sudo postgresql-setup --initdb
+$ sudo systemctl enable --now postgresql
+$ sudo systemctl status postgresql
 ```
 
 ---
