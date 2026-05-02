@@ -8,7 +8,7 @@ EXEC SQL END DECLARE SECTION;
 EXEC SQL INCLUDE sqlca;
 int main(void) {
 
-    EXEC SQL CONNECT TO debtor USER postgres;
+
       EXEC SQL CONNECT TO debtors USER blue;
 
     EXEC SQL SELECT "SEL_NAME", "SHOP"
