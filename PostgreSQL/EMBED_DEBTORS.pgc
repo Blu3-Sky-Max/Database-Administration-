@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+EXEC SQL BEGIN DECLARE SECTION;
+    char sel_name[20];
+    char shop[20];
+EXEC SQL END DECLARE SECTION;
+
+EXEC SQL INCLUDE sqlca;
+int main(void) {
+
+    EXEC SQL CONNECT TO debtor USER postgres;
+      EXEC SQL CONNECT TO debtors USER blue;
+
+    EXEC SQL SELECT "SEL_NAME", "SHOP"
+             INTO :sel_name, :shop
+             FROM "SELLER"
+             WHERE "SEL_NAME" = 'DAVID';
+
+    printf("Seller: %s\nShop: %s\n", sel_name, shop);
+
+    EXEC SQL DISCONNECT;
+
+}
