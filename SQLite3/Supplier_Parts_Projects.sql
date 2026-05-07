@@ -63,8 +63,8 @@ INSERT INTO PROJECT VALUES
           ('J7','TAPE','LONDON' );
 
 INSERT INTO SHIPMENTS VALUES
-                ('S1', 'P1', 'J1', 200),
-                ('S1', 'P1', 'J4', 700),
+		('S1', 'P1', 'J1', 200),
+		('S1', 'P1', 'J4', 700),
 		('S2', 'P3', 'J1', 400),
 		('S2', 'P3', 'J2', 200),
 		('S2', 'P3', 'J3', 200),
