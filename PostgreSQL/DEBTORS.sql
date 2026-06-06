@@ -36,7 +36,7 @@ INSERT INTO "DEBTORS" VALUES
 		 ('FARUK', 3245.3, 'JET','DAVID');
 
 
-
+-- Query table 
                             
 SELECT 
 * FROM "SELLER" S
@@ -45,7 +45,7 @@ JOIN
 ON 
 S."SEL_NAME" = D."SEL_NAME";
 
-
+-- View: HIGHER_DEBTORS where debtor greater 500  
 CREATE VIEW "HIGHER_DEBTORS" AS 
 SELECT 
 D."DEB_NAME",
@@ -59,7 +59,7 @@ ON
 S."SEL_NAME" = D."SEL_NAME"
 WHERE
 D."AMOUNT" > 500 ;
-
+-- Query HIGHER_DEBTORS view
 SELECT 
 * FROM 
 "HIGHER_DEBTORS"; 
