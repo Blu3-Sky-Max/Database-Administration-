@@ -1,4 +1,8 @@
 #include <stdio.h>
+/* Embedded SQL in C: fetches seller name and shop from debtors DB using ecpg 
+
+
+ Host variables to receive query results from PostgreSQL */
 
 EXEC SQL BEGIN DECLARE SECTION;
     char sel_name[20];
@@ -8,13 +12,19 @@ EXEC SQL END DECLARE SECTION;
 EXEC SQL INCLUDE sqlca;
 int main(void) {
 
+// Connect to the debtors PostgreSQL database as user blue 
+
 
       EXEC SQL CONNECT TO debtors USER blue;
+
+// Fetch SEL_NAME and SHOP for seller DAVID into host variables 
 
     EXEC SQL SELECT "SEL_NAME", "SHOP"
              INTO :sel_name, :shop
              FROM "SELLER"
              WHERE "SEL_NAME" = 'DAVID';
+
+     // Print fetched values  
 
     printf("Seller: %s\nShop: %s\n", sel_name, shop);
 
