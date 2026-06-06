@@ -46,19 +46,19 @@ INSERT INTO Supervisor (Name,Surname,Date,Supervisor_Id) VALUES
  ('Dr.', 'Abdullahi' ,'2026-03-21' ,8893284222);
 
 
---Getting the combination of the two table
+--Query two table
 
 SELECT * FROM Database_exam_2026 JOIN Supervisor  ON  Database_exam_2026.Supervisor_Id = Supervisor.Supervisor_Id; 
 
 
---Getting Grade less than equal 50
+--Query Grade less than equal 50
 
 SELECT * FROM  Database_exam_2026 JOIN  Supervisor ON  Database_exam_2026.supervisor_Id=Supervisor.supervisor_Id WHERE Database_exam_2026.grade <= 50;
 
--- Getting All Student Sat At D505, has above 50 or equal 50 
+-- Query All Student Sat At D505, has above 50 or equal 50 
 
 SELECT  Database_exam_2026.Grade, Database_exam_2026.Name, Database_exam_2026.Surname,Database_exam_2026.Student_no FROM Database_exam_2026 JOIN  Supervisor ON  Database_exam_2026.Supervisor_Id=Supervisor.Supervisor_Id WHERE  Database_exam_2026.grade >= 50 and Database_exam_2026.room='D505' ; 
 
 
------- Getting All Student Sat at D605 
+------ Query All Student Sat at D605 
 SELECT * FROM Database_exam_2026 JOIN Supervisor on Database_exam_2026.Supervisor_Id=Supervisor.Supervisor_Id WHERE Database_exam_2026.Room='D605'; 

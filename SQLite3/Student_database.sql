@@ -26,7 +26,7 @@ INSERT INTO Student (name, height, location, school, date_of_birth, major, gpa, 
 ('beyza',23,'istanbul ', 'Altinbas university' ,'1996-02-21', 'computer engineering',4.5,'beyzanur@gmail.com'),
 ('Yusuf',35,'istanbul ', 'Altinbas university' ,'1990-02-21', 'Computer engineering',4.5,'yusuf@gmail.com');
 
-
+-- Correct missing country fields and fix name/school 
 UPDATE Student SET country='United state' WHERE id =1;
 
 UPDATE Student SET country='Morocco' WHERE id =2;
@@ -36,6 +36,10 @@ UPDATE Student SET country='Turkey'WHERE id =5;
 
 UPDATE Student SET height=183 WHERE id =1; 
 
-UPDATE Student SET school='bosun university' WHERE id =3; 
+UPDATE Student SET school='bose university' WHERE id =3; 
+-- Insert additional student with partial data  
+
 INSERT INTO Student (name,location,major) values ('john','Egypt','Computer science'); 
+
+-- Query the table 
 SELECT * FROM Student;
